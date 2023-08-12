@@ -7,3 +7,5 @@
 ```console
 foo@bar:~$ love .
 ```
+
+![Alt Text](flappy.gif)
