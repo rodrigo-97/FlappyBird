@@ -5,10 +5,10 @@ local Config = require("config")
 local Background = require("background")
 local Bird = require("bird")
 
-local background = nil
-local pipes = nil
+local background = Background
+local pipes = Pipes
 local ground = Ground
-local bird = nil
+local bird = Bird
 
 local velocity = 100
 local debugMode = false
@@ -35,7 +35,7 @@ function love.draw()
   background:draw()
   pipes:draw()
   ground:draw()
-  bird:draw(100, 200)
+  bird:draw()
 
   if debugMode then
     bird:drawCollider()
@@ -47,7 +47,7 @@ end
 
 function love.update(dt)
   ground:update(dt)
-  pipes:move(dt, 112)
+  pipes:move(dt)
   bird:update(dt)
 
   if pipes:checkCollision(bird) then
