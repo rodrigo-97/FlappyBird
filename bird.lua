@@ -59,7 +59,7 @@ end
 function Bird:draw()
   local image = self.images[self.currentFrame]
   local x = 100
-  local y = self.y + self.birdHeight / 2
+  local y = self.y + self.birdHeight / 1.5
   local scaleX = 1
   local scaleY = 1
 

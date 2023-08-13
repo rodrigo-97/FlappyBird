@@ -19,7 +19,7 @@ function love.load()
   Config:setup()
 
   ground:setImage("assets/objects/base.png")
-  pipes = Pipes:new('assets/objects/pipe_top.png', 150, velocity)
+  pipes = Pipes:new('assets/objects/pipe_top.png', 120, velocity)
   background = Background:new("assets/objects/background.png")
   ground:setup(velocity)
 
